@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karavan Brno — Hobby De Luxe 545 KMF</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:        #FFFFFF;
+    --bg2:       #F7F7F5;
+    --bg3:       #EFEFEB;
+    --accent:    #3D3D3A;
+    --accent2:   #1A1A18;
+    --accent-lt: #F2F2EF;
+    --gold:      #C4A35A;
+    --text:      #1A1A18;
+    --muted:     #888883;
+    --border:    #E4E4E0;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(145deg, #1A1A18 0%, #2E2E2B 55%, #3D3D3A 100%);
+    color: white;
+    padding: 64px 24px 72px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 70% 30%, rgba(255,255,255,0.05) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 0; right: 0;
+    height: 40px;
+    background: var(--bg);
+    clip-path: ellipse(55% 100% at 50% 100%);
+  }
+  .hero-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    color: white;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: #D4B97A;
+  }
+  .hero-sub {
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 32px;
+    font-weight: 300;
+  }
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .badge {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.9);
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 13px;
+  }
+  .hero-cta {
+    display: inline-block;
+    background: white;
+    color: var(--accent2);
+    text-decoration: none;
+    padding: 14px 36px;
+    border-radius: 100px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+  .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.2); }
+
+  /* ── SECTION ── */
+  section { padding: 52px 24px; max-width: 720px; margin: 0 auto; }
+  section + section { padding-top: 0; }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 24px;
+  }
+
+  /* ── HIGHLIGHTS ── */
+  .highlights {
+    background: var(--bg2);
+    max-width: 100%;
+    padding: 48px 24px;
+  }
+  .highlights-inner { max-width: 720px; margin: 0 auto; }
+  .highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin-top: 8px;
+  }
+  .highlight-card {
+    background: var(--bg);
+    border-radius: 14px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    transition: box-shadow 0.2s;
+  }
+  .highlight-card:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.07); }
+  .highlight-icon { font-size: 22px; margin-bottom: 10px; display: block; }
+  .highlight-card h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .highlight-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+  /* ── VYBAVA ── */
+  .vybava-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  @media (max-width: 500px) { .vybava-grid { grid-template-columns: 1fr; } }
+  .vybava-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 11px 14px;
+    background: var(--bg2);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  .vybava-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+    margin-top: 7px;
+  }
+  .vybava-item span { font-size: 14px; color: var(--text); line-height: 1.4; }
+
+  /* ── NOVINKA ── */
+  .novinka-box {
+    background: var(--accent-lt);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    border: 1px solid rgba(61,61,58,0.15);
+  }
+  .novinka-icon { font-size: 26px; flex-shrink: 0; }
+  .novinka-box h3 { font-size: 15px; font-weight: 500; color: var(--accent2); margin-bottom: 3px; }
+  .novinka-box p { font-size: 13px; color: var(--accent); line-height: 1.5; }
+
+  /* ── CENÍK ── */
+  .cenik-section {
+    background: var(--bg2);
+    max-width: 100%;
+    padding: 52px 24px;
+  }
+  .cenik-inner { max-width: 720px; margin: 0 auto; }
+  .cenik-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  @media (max-width: 480px) { .cenik-grid { grid-template-columns: 1fr; } }
+  .cenik-card {
+    background: var(--bg);
+    border-radius: 14px;
+    padding: 24px;
+    border: 1px solid var(--border);
+  }
+  .cenik-card.hlavni { border: 2px solid var(--text); }
+  .cenik-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .cenik-label.hlavni-label { color: var(--accent); }
+  .cenik-price {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    color: var(--text);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .cenik-unit { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+  .cenik-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .cenik-row:last-child { border-bottom: none; }
+  .cenik-row .label { color: var(--muted); }
+  .cenik-row .val { font-weight: 500; color: var(--text); }
+  .cenik-note {
+    font-size: 13px;
+    color: var(--muted);
+    background: var(--bg);
+    border-radius: 10px;
+    padding: 13px 16px;
+    border-left: 3px solid var(--accent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+  }
+
+  /* ── REZERVACE ── */
+  .rezervace-intro { font-size: 14px; color: var(--muted); margin-bottom: 28px; line-height: 1.7; }
+  .steps { display: flex; flex-direction: column; gap: 0; margin-bottom: 32px; }
+  .step {
+    display: flex; gap: 16px; align-items: flex-start;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .step:last-child { border-bottom: none; }
+  .step-num {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--accent);
+    color: white;
+    font-size: 13px; font-weight: 500;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .step p { font-size: 14px; line-height: 1.5; padding-top: 4px; }
+  .step p strong { color: var(--accent2); }
+
+  /* ── FORM ── */
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 500px) { .form-grid { grid-template-columns: 1fr; } }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group.full { grid-column: 1 / -1; }
+  label {
+    font-size: 12px; font-weight: 500;
+    color: var(--muted);
+    letter-spacing: 0.05em; text-transform: uppercase;
+  }
+  input, textarea, select {
+    padding: 10px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    color: var(--text);
+    background: var(--bg);
+    transition: border-color 0.15s;
+    outline: none;
+  }
+  input:focus, textarea:focus { border-color: var(--accent); }
+  textarea { resize: vertical; min-height: 90px; }
+  .btn-submit {
+    margin-top: 8px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 13px 32px;
+    border-radius: 100px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px; font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-submit:hover { background: var(--accent2); transform: translateY(-1px); }
+
+  /* ── KONTAKT ── */
+  .kontakt-section {
+    background: linear-gradient(135deg, #1A1A18 0%, #2E2E2B 100%);
+    color: white;
+    max-width: 100%;
+    padding: 52px 24px;
+    text-align: center;
+  }
+  .kontakt-inner { max-width: 720px; margin: 0 auto; }
+  .kontakt-section h2 { color: white; margin-bottom: 8px; font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 400; }
+  .kontakt-name { font-size: 17px; font-weight: 500; margin-bottom: 20px; color: rgba(255,255,255,0.85); }
+  .kontakt-links {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center; margin-bottom: 20px;
+  }
+  .kontakt-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: white; text-decoration: none; font-size: 15px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.18);
+    padding: 10px 20px; border-radius: 100px;
+    transition: background 0.2s;
+  }
+  .kontakt-link:hover { background: rgba(255,255,255,0.2); }
+  .kontakt-adresa { font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 16px; }
+
+  /* ── PREDANI ── */
+  .predani-box {
+    background: var(--accent-lt);
+    border-radius: 12px;
+    padding: 18px 22px;
+    border-left: 4px solid var(--accent);
+  }
+  .predani-box p { font-size: 14px; color: var(--accent2); line-height: 1.7; font-weight: 400; }
+  .predani-box strong { font-weight: 500; }
+
+  /* ── FADE IN ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero > * { animation: fadeUp 0.5s ease both; }
+  .hero-label { animation-delay: 0s; }
+  .hero h1    { animation-delay: 0.1s; }
+  .hero-sub   { animation-delay: 0.2s; }
+  .hero-badges { animation-delay: 0.3s; }
+  .hero-cta   { animation-delay: 0.4s; }
+
+  /* ── DIVIDER ── */
+  .divider { height: 1px; background: var(--border); max-width: 720px; margin: 0 auto; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <span class="hero-label">karavanbrno.eu · Pronájem karavanu · Brno a okolí</span>
+  <h1>Rodinná dovolená<br><em>s komfortem domova</em></h1>
+  <p class="hero-sub">Hobby De Luxe 545 KMF · ideálně 4, až 6 osob · Hostěnice u Brna</p>
+  <div class="hero-badges">
+    <span class="badge">👨‍👩‍👧‍👦 Ideálně 4, až 6 osob</span>
+    <span class="badge">🚿 Sprchový kout + WC</span>
+    <span class="badge">🍳 Kuchyňka 150 l lednice</span>
+    <span class="badge">⚡ Moover – parkování bez stresu</span>
+  </div>
+  <a href="#rezervace" class="hero-cta">Zjistit dostupnost a rezervovat</a>
+</div>
+
+<!-- HIGHLIGHTS -->
+<div class="highlights">
+  <div class="highlights-inner">
+    <div class="highlight-grid">
+      <div class="highlight-card">
+        <span class="highlight-icon">📍</span>
+        <h3>Převzetí</h3>
+        <p>Hostěnice u Brna — 10 min od Brno-Slatina i Brno-Vinohrady. Přistavení na dohodnuté místo po předchozí domluvě.</p>
+      </div>
+      <div class="highlight-card">
+        <span class="highlight-icon">👨‍👩‍👧‍👦</span>
+        <h3>Pro celou rodinu</h3>
+        <p>Ideální pro 4 osoby, pojme až 6. Francouzské lůžko + palandy pro děti + rozkládací sedačka.</p>
+      </div>
+      <div class="highlight-card">
+        <span class="highlight-icon">🤝</span>
+        <h3>Důkladné předání</h3>
+        <p>Vše ukážeme a vysvětlíme. Jsme k dispozici i během vaší cesty.</p>
+      </div>
+      <div class="highlight-card">
+        <span class="highlight-icon">⚡</span>
+        <h3>Novinka: Moover</h3>
+        <p>Elektrický pojezd + baterie. Manévrování na místě bez tažného vozidla.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VYBAVA -->
+<section>
+  <h2>Výbava karavanu</h2>
+
+  <div class="novinka-box">
+    <span class="novinka-icon">⚡</span>
+    <div>
+      <h3>Novinka: Moover + baterie</h3>
+      <p>Elektrický pojezd umožňuje parkování a manévrování bez tažného vozidla. Baterie zajistí provoz i bez připojení ke zdroji.</p>
+    </div>
+  </div>
+
+  <div class="vybava-grid">
+    <div class="vybava-item"><span class="vybava-dot"></span><span>Kuchyňka — vařič 3plotýnkový</span></div>
+    <div class="vybava-item"><span class="vybava-dot"></span><span>Lednice 150 l s mrazákem</span></div>
+    <div class="vybava-item"><span class="vybava-dot"></span><span>Francouzské lůžko 200×140 cm</span></div>
+    <div class="vybava-item"><span class="vybava-dot"></span><span>Palanda 185×70 cm (do 75 kg)</span></div>
+    <div class="vybava-item"><span class="vybava-dot"></span><span>Rozkládací sedačka 118×193 cm</span></div>
+    <div class="vybava-item"><span class="vybava-dot"></span><span>Kvalitní matrace na všech lůžkách</span></div>
+    <div class="vybava-item"><span class="vybava-dot"></span><span>Sprchový kout uzavírací</span></div>
+    <div class="vybava-item"><span class="vybava-dot"></span><span>WC + zrcadlo + úložné prostory</span></div>
+    <div class="vybava-item"><span class="vybava-dot"></span><span>Prostorné sezení pro stolování</span></div>
+    <div class="vybava-item"><span class="vybava-dot"></span><span>Úložné prostory po celém karavanu</span></div>
+  </div>
+
+  <div style="margin-top: 24px;">
+    <div class="predani-box">
+      <p><strong>Předání je vždy důkladné</strong> — vše ukážeme, vysvětlíme a jsme k dispozici i během vaší dovolené, kdybyste si s něčím nebyli jistí.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOTOGALERIE -->
+<div style="background:var(--bg2);padding:52px 24px;">
+  <div style="max-width:720px;margin:0 auto;">
+    <h2 style="font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;color:var(--text);margin-bottom:6px;">Fotogalerie</h2>
+    <p style="font-size:14px;color:var(--muted);margin-bottom:24px;">Kliknutím na fotku ji zobrazíte na celou obrazovku.</p>
+    <div id="galerie" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;"></div>
+    <p id="galerie-hint" style="margin-top:16px;font-size:12px;color:var(--muted);display:none;">
+      Fotky se načtou automaticky ze složky <code style="background:var(--bg3);padding:2px 6px;border-radius:4px;font-size:11px;">fotky/</code>
+    </p>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="zavritLightbox()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:999;align-items:center;justify-content:center;cursor:zoom-out;">
+  <button onclick="posunFoto(-1);event.stopPropagation()" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:white;width:44px;height:44px;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;">‹</button>
+  <img id="lightbox-img" src="" alt="" style="max-width:90vw;max-height:88vh;border-radius:8px;object-fit:contain;pointer-events:none;">
+  <button onclick="posunFoto(1);event.stopPropagation()" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:white;width:44px;height:44px;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;">›</button>
+  <div id="lightbox-pocitadlo" style="position:absolute;bottom:16px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.5);font-size:13px;"></div>
+  <button onclick="zavritLightbox()" style="position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:white;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;">×</button>
+</div>
+
+<div class="divider"></div>
+
+<!-- CENÍK -->
+<div class="cenik-section">
+  <div class="cenik-inner">
+    <h2>Ceník pronájmu</h2>
+    <div class="cenik-grid">
+      <div class="cenik-card">
+        <div class="cenik-label">Vedlejší sezóna</div>
+        <div class="cenik-price">1 800 Kč</div>
+        <div class="cenik-unit">za den (do 14 dní)</div>
+        <div class="cenik-row"><span class="label">Nad 14 dní</span><span class="val">1 600 Kč / den</span></div>
+      </div>
+      <div class="cenik-card hlavni">
+        <div class="cenik-label hlavni-label">Hlavní sezóna</div>
+        <div class="cenik-price">1 950 Kč</div>
+        <div class="cenik-unit">za den (do 14 dní)</div>
+        <div class="cenik-row"><span class="label">Nad 14 dní</span><span class="val">1 750 Kč / den</span></div>
+      </div>
+    </div>
+    <div class="cenik-note" style="margin-bottom: 12px;">
+      Cenu a dostupnost vždy <strong>potvrdíme zpět</strong> e-mailem nebo telefonicky po odeslání poptávky.
+    </div>
+    <div class="cenik-note">
+      🚗 <strong>Přistavení karavanu</strong> na vámi zvolené místo je možné po předchozí domluvě. Cena přistavení sdělena individuálně.</div>
+  </div>
+</div>
+
+<!-- DOSTUPNOST -->
+<div id="dostupnost" style="background:var(--bg2);padding:52px 24px;">
+  <div style="max-width:720px;margin:0 auto;">
+    <h2 style="color:var(--text);font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;margin-bottom:6px;">Dostupnost</h2>
+    <p style="font-size:14px;color:var(--muted);margin-bottom:24px;">Orientační přehled — rezervaci vždy potvrdíme e-mailem nebo telefonicky.</p>
+
+    <div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:24px;align-items:center;">
+      <span style="display:flex;align-items:center;gap:7px;font-size:13px;color:var(--muted);">
+        <span style="width:13px;height:13px;border-radius:3px;background:#A85C3A;display:inline-block;flex-shrink:0;"></span>Obsazeno
+      </span>
+      <span style="display:flex;align-items:center;gap:7px;font-size:13px;color:var(--muted);">
+        <span style="width:13px;height:13px;border-radius:3px;background:#3D3D3A;display:inline-block;flex-shrink:0;"></span>Volno
+      </span>
+      <span style="display:flex;align-items:center;gap:7px;font-size:13px;color:var(--muted);">
+        <span style="width:13px;height:13px;border-radius:3px;background:#D4962A;display:inline-block;flex-shrink:0;"></span>Rezervace
+      </span>
+      <span style="display:flex;align-items:center;gap:7px;font-size:13px;color:var(--muted);">
+        <span style="width:13px;height:13px;border-radius:3px;background:#E4E4E0;border:1px solid #CFCFCA;display:inline-block;flex-shrink:0;"></span>Mimo sezónu
+      </span>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+      <button onclick="posunMesic(-1)" style="background:white;border:1px solid var(--border);border-radius:8px;width:36px;height:36px;cursor:pointer;font-size:16px;color:var(--text);display:flex;align-items:center;justify-content:center;">‹</button>
+      <span id="kal-nadpis" style="font-family:'Fraunces',serif;font-size:1.1rem;color:var(--text);min-width:160px;text-align:center;"></span>
+      <button onclick="posunMesic(1)" style="background:white;border:1px solid var(--border);border-radius:8px;width:36px;height:36px;cursor:pointer;font-size:16px;color:var(--text);display:flex;align-items:center;justify-content:center;">›</button>
+    </div>
+
+    <div style="background:white;border-radius:12px;border:1px solid var(--border);padding:20px;">
+      <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:8px;">
+        <div style="text-align:center;font-size:11px;font-weight:500;color:var(--muted);padding:4px 0;">Po</div>
+        <div style="text-align:center;font-size:11px;font-weight:500;color:var(--muted);padding:4px 0;">Út</div>
+        <div style="text-align:center;font-size:11px;font-weight:500;color:var(--muted);padding:4px 0;">St</div>
+        <div style="text-align:center;font-size:11px;font-weight:500;color:var(--muted);padding:4px 0;">Čt</div>
+        <div style="text-align:center;font-size:11px;font-weight:500;color:var(--muted);padding:4px 0;">Pá</div>
+        <div style="text-align:center;font-size:11px;font-weight:500;color:var(--muted);padding:4px 0;">So</div>
+        <div style="text-align:center;font-size:11px;font-weight:500;color:var(--muted);padding:4px 0;">Ne</div>
+      </div>
+      <div id="kal-dny" style="display:grid;grid-template-columns:repeat(7,1fr);gap:4px;"></div>
+    </div>
+    <p style="margin-top:12px;font-size:12px;color:var(--muted);">Rezervaci vždy potvrdíme zpět. Klikněte na den pro poptávku.</p>
+  </div>
+</div>
+
+
+<section id="rezervace">
+  <h2>Rezervace</h2>
+  <p class="rezervace-intro">Kalendář průběžně aktualizujeme, ale berte ho jako orientační. Rezervaci vždy potvrdíme zpět.</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <p>Pošlete nám <strong>termín (od–do)</strong>, počet osob a případně místo přistavení</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <p>Potvrdíme vám <strong>dostupnost a cenu</strong></p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <p>Domluvíme <strong>předání a veškeré detaily</strong></p>
+    </div>
+  </div>
+
+  <form onsubmit="odeslat(event)">
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Jméno a příjmení</label>
+        <input type="text" placeholder="Jan Novák" required>
+      </div>
+      <div class="form-group">
+        <label>Telefon</label>
+        <input type="tel" placeholder="+420 600 000 000" required>
+      </div>
+      <div class="form-group">
+        <label>E-mail</label>
+        <input type="email" placeholder="vas@email.cz" required>
+      </div>
+      <div class="form-group">
+        <label>Počet osob</label>
+        <input type="number" min="1" max="6" placeholder="2–6">
+      </div>
+      <div class="form-group">
+        <label>Od</label>
+        <input type="date" required>
+      </div>
+      <div class="form-group">
+        <label>Do</label>
+        <input type="date" required>
+      </div>
+      <div class="form-group full">
+        <label>Dotazy / místo přistavení</label>
+        <textarea placeholder="Např. přistavení v Brně, dotaz na výbavu…"></textarea>
+      </div>
+    </div>
+    <button type="submit" class="btn-submit">Odeslat poptávku →</button>
+  </form>
+</section>
+
+<!-- KONTAKT -->
+<div class="kontakt-section">
+  <div class="kontakt-inner">
+    <h2>Kontakt</h2>
+    <div class="kontakt-name">Petr a Dita Vidrmertovi</div>
+    <div class="kontakt-links">
+      <a href="tel:+420606722911" class="kontakt-link">📞 +420 606 722 911</a>
+      <a href="/cdn-cgi/l/email-protection#a9c0c7cfc6e9c2c8dbc8dfc8c7cbdbc7c687ccdc" class="kontakt-link">✉️ <span class="__cf_email__" data-cfemail="93fafdf5fcd3f8f2e1f2e5f2fdf1e1fdfcbdf6e6">[email&#160;protected]</span></a>
+    </div>
+    <div class="kontakt-adresa">Hostěnice 249, 664 04 Hostěnice u Brna</div>
+  </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function odeslat(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.btn-submit');
+  btn.textContent = '✓ Odesláno! Brzy se ozveme.';
+  btn.style.background = "#B8973E";
+  btn.disabled = true;
+}
+
+// ═══════════════════════════════════════════════════
+// OBSAZENÉ TERMÍNY — zde přidávej/odebírej rezervace
+// Formát: 'YYYY-MM-DD' pro jednotlivé dny,
+// nebo rozsah pomocí funkce range() níže
+// ═══════════════════════════════════════════════════
+function range(od, do_) {
+  const dny = [];
+  const d = new Date(od);
+  const konec = new Date(do_);
+  while (d <= konec) {
+    dny.push(d.toISOString().slice(0,10));
+    d.setDate(d.getDate()+1);
+  }
+  return dny;
+}
+
+const obsazeno = new Set([
+  ...range('2025-07-05', '2025-07-19'),
+  ...range('2025-08-02', '2025-08-16'),
+  ...range('2025-06-14', '2025-06-21'),
+]);
+
+// ═══════════════════════════════════════════════════
+// REZERVACE (čeká úhrada zálohy) — stejný formát jako obsazeno
+// ═══════════════════════════════════════════════════
+const rezervace = new Set([
+  // ...range('2025-05-10', '2025-05-17'),
+]);
+
+// Sezóna: březen–říjen
+const sezona = { od: 3, do: 10 }; // měsíce (1=leden)
+
+const mesiceNazvy = ['Leden','Únor','Březen','Duben','Květen','Červen',
+                     'Červenec','Srpen','Září','Říjen','Listopad','Prosinec'];
+
+let aktualniRok = new Date().getFullYear();
+let aktualniMesic = new Date().getMonth(); // 0-based
+
+function kresliKalendar() {
+  var m = aktualniMesic;
+  var r = aktualniRok;
+  var nadpis = document.getElementById('kal-nadpis');
+  var dnyEl = document.getElementById('kal-dny');
+  if (!nadpis || !dnyEl) { console.error('kal elementy nenalezeny'); return; }
+
+  nadpis.textContent = mesiceNazvy[m] + ' ' + r;
+  dnyEl.innerHTML = '';
+
+  var prvniDen = new Date(r, m, 1);
+  var pocetDni = new Date(r, m + 1, 0).getDate();
+  var zacatek = (prvniDen.getDay() + 6) % 7;
+  var jeMimoSezonu = (m + 1) < sezona.od || (m + 1) > sezona.do;
+  var dnes = new Date().toISOString().slice(0, 10);
+
+  for (var i = 0; i < zacatek; i++) {
+    dnyEl.appendChild(document.createElement('div'));
+  }
+
+  for (var d = 1; d <= pocetDni; d++) {
+    var datum = r + '-' + String(m + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0');
+    var jeObsazeno = obsazeno.has(datum);
+    var jeRezervace = rezervace.has(datum);
+    var jeMinuly = datum < dnes;
+
+    var bg, col, cur;
+    if (jeMimoSezonu)     { bg = '#E4E4E0'; col = '#AEAEA9'; cur = 'default'; }
+    else if (jeObsazeno)  { bg = '#A85C3A'; col = '#FFFFFF'; cur = 'default'; }
+    else if (jeRezervace) { bg = '#D4962A'; col = '#FFFFFF'; cur = 'default'; }
+    else if (jeMinuly)    { bg = '#F2F2EF'; col = '#C8C8C4'; cur = 'default'; }
+    else                  { bg = '#F7F7F5'; col = '#1A1A18'; cur = 'pointer'; }
+
+    var div = document.createElement('div');
+    div.textContent = d;
+    div.style.textAlign = 'center';
+    div.style.padding = '8px 2px';
+    div.style.borderRadius = '6px';
+    div.style.background = bg;
+    div.style.color = col;
+    div.style.fontSize = '13px';
+    div.style.cursor = cur;
+    div.style.fontWeight = jeObsazeno ? '500' : '400';
+
+    if (cur === 'pointer') {
+      (function(el, origBg, d2) {
+        el.addEventListener('mouseover', function() { el.style.background = '#D4D4CF'; });
+        el.addEventListener('mouseout',  function() { el.style.background = origBg; });
+        el.addEventListener('click',     function() { vybratDen(d2); });
+      })(div, bg, datum);
+    }
+
+    dnyEl.appendChild(div);
+  }
+}
+
+function posunMesic(smer) {
+  aktualniMesic += smer;
+  if (aktualniMesic > 11) { aktualniMesic = 0; aktualniRok++; }
+  if (aktualniMesic < 0)  { aktualniMesic = 11; aktualniRok--; }
+  kresliKalendar();
+}
+
+function vybratDen(datum) {
+  const inputOd = document.querySelector('#rezervace input[type="date"]');
+  if (inputOd) {
+    inputOd.value = datum;
+    document.getElementById('rezervace').scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+// ═══════════════════════════════════════════════════
+// FOTOGALERIE — sem přidej názvy svých fotek
+// Fotky vlož do složky "fotky/" vedle tohoto souboru
+// ═══════════════════════════════════════════════════
+const fotky = [
+  { src: 'fotky/Držák 2 kol.jpg', alt: 'Držák 2 kol' },
+  { src: 'fotky/mover detail.jpeg', alt: 'Mover detail' },
+  { src: 'fotky/mover.jpeg', alt: 'Mover' },
+  { src: 'fotky/karavan v kempu.jpg', alt: 'Karavan v kempu' },
+  { src: 'fotky/Klimatizace.jpg', alt: 'Klimatizace' },
+  { src: 'fotky/Koupelna sprcha.jpg', alt: 'Koupelna a sprcha' },
+  { src: 'fotky/Koupelna umyvadlo WC.jpg', alt: 'Koupelna umyvadlo WC' },
+  { src: 'fotky/Kuchyň a posezení.jpg', alt: 'Kuchyň a posezení' },
+  { src: 'fotky/Kuchyňská linka.jpg', alt: 'Kuchyňská linka' },
+  { src: 'fotky/Markýza.jpg', alt: 'Markýza' },
+  { src: 'fotky/Patrové postele.jpg', alt: 'Patrové postele' },
+  { src: 'fotky/Sedačka stůl.jpg', alt: 'Sedačka a stůl' },
+  { src: 'fotky/Vstup televize.jpg', alt: 'Vstup a televize' },
+];
+
+let aktivniFoto = 0;
+
+function sestavGalerii() {
+  var g = document.getElementById('galerie');
+  if (!g) return;
+  var popisky = [
+    'Karavan zvenku', 'Obývací část', 'Kuchyňka',
+    'Ložnice', 'Palandy', 'Koupelna', 'Úložné prostory'
+  ];
+  fotky.forEach(function(f, i) {
+    var div = document.createElement('div');
+    div.style.cssText = 'aspect-ratio:4/3;overflow:hidden;border-radius:8px;background:#F2F2EF;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;';
+    
+    var img = document.createElement('img');
+    img.src = f.src;
+    img.alt = f.alt;
+    img.style.cssText = 'width:100%;height:100%;object-fit:cover;transition:transform 0.3s ease;display:block;';
+    
+    img.onload = function() {
+      div.style.cssText = 'aspect-ratio:4/3;overflow:hidden;border-radius:8px;cursor:zoom-in;background:#F2F2EF;';
+      div.innerHTML = '';
+      div.appendChild(img);
+      div.onclick = function() { otevritLightbox(i); };
+      div.onmouseover = function() { img.style.transform = 'scale(1.05)'; };
+      div.onmouseout  = function() { img.style.transform = 'scale(1)'; };
+    };
+    
+    img.onerror = function() {
+      div.innerHTML = '<span style="font-size:28px;">🖼</span><span style="font-size:11px;color:#888883;text-align:center;padding:0 8px;">' + f.alt + '</span>';
+    };
+    
+    // show placeholder first, then try loading image
+    div.innerHTML = '<span style="font-size:28px;opacity:.3;">🖼</span><span style="font-size:11px;color:#888883;">' + f.alt + '</span>';
+    div.appendChild(img);
+    g.appendChild(div);
+  });
+}
+
+function otevritLightbox(index) {
+  aktivniFoto = index;
+  const lb = document.getElementById('lightbox');
+  lb.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  aktualizovatLightbox();
+}
+
+function aktualizovatLightbox() {
+  document.getElementById('lightbox-img').src = fotky[aktivniFoto].src;
+  document.getElementById('lightbox-img').alt = fotky[aktivniFoto].alt;
+  document.getElementById('lightbox-pocitadlo').textContent = (aktivniFoto + 1) + ' / ' + fotky.length;
+}
+
+function posunFoto(smer) {
+  aktivniFoto = (aktivniFoto + smer + fotky.length) % fotky.length;
+  aktualizovatLightbox();
+}
+
+function zavritLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+  if (document.getElementById('lightbox').style.display === 'none') return;
+  if (e.key === 'ArrowRight') posunFoto(1);
+  if (e.key === 'ArrowLeft')  posunFoto(-1);
+  if (e.key === 'Escape')     zavritLightbox();
+});
+
+kresliKalendar();
+sestavGalerii();
+</script>
+</body>
+</html>
