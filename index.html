@@ -132,7 +132,7 @@
   .highlights-inner { max-width: 720px; margin: 0 auto; }
   .highlight-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 14px;
     margin-top: 8px;
   }
@@ -144,7 +144,7 @@
     transition: box-shadow 0.2s;
   }
   .highlight-card:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.07); }
-  .highlight-icon { font-size: 22px; margin-bottom: 10px; display: block; }
+  .highlight-icon { display: block; margin-bottom: 12px; line-height: 1; }
   .highlight-card h3 {
     font-size: 14px;
     font-weight: 500;
@@ -371,7 +371,8 @@
     <span class="badge">👨‍👩‍👧‍👦 Ideálně 4, až 6 osob</span>
     <span class="badge">🚿 Sprchový kout + WC</span>
     <span class="badge">🍳 Kuchyňka 150 l lednice</span>
-    <span class="badge">⚡ Moover – parkování bez stresu</span>
+    <span class="badge">⚡ Mover – parkování bez stresu</span>
+    <span class="badge">🪪 Řidičský průkaz B96 nebo B+E · hmotnost 1 750 kg</span>
   </div>
   <a href="#rezervace" class="hero-cta">Zjistit dostupnost a rezervovat</a>
 </div>
@@ -381,24 +382,24 @@
   <div class="highlights-inner">
     <div class="highlight-grid">
       <div class="highlight-card">
-        <span class="highlight-icon">📍</span>
+        <span class="highlight-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="#2E7D5E" stroke="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5" fill="white"/></svg></span>
         <h3>Převzetí</h3>
-        <p>Hostěnice u Brna — 10 min od Brno-Slatina i Brno-Vinohrady. Přistavení na dohodnuté místo po předchozí domluvě.</p>
+        <p style="margin:0;line-height:1.6;">•&nbsp; Hostěnice u Brna<br>•&nbsp; 10 min od Brno-Slatina/Vinohrady</p>
       </div>
       <div class="highlight-card">
-        <span class="highlight-icon">👨‍👩‍👧‍👦</span>
+        <span class="highlight-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C07A2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="2.2" fill="#C07A2A"/><circle cx="15" cy="7" r="2.2" fill="#C07A2A"/><path d="M5 21v-2a4 4 0 014-4h6a4 4 0 014 4v2" fill="none"/></svg></span>
         <h3>Pro celou rodinu</h3>
-        <p>Ideální pro 4 osoby, pojme až 6. Francouzské lůžko + palandy pro děti + rozkládací sedačka.</p>
+        <p style="margin:0;line-height:1.6;">•&nbsp; Ideální pro 4 osoby, pojme až 6<br>•&nbsp; Francouzské lůžko + palandy<br>•&nbsp; Rozkládací sedačka</p>
       </div>
       <div class="highlight-card">
-        <span class="highlight-icon">🤝</span>
+        <span class="highlight-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#2563EB"/><polyline points="7 12 10.5 15.5 17 9" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <h3>Důkladné předání</h3>
-        <p>Vše ukážeme a vysvětlíme. Jsme k dispozici i během vaší cesty.</p>
+        <p style="margin:0;line-height:1.6;">•&nbsp; Vše ukážeme a vysvětlíme.<br>•&nbsp; Jsme k dispozici i během vaší cesty.</p>
       </div>
       <div class="highlight-card">
-        <span class="highlight-icon">⚡</span>
-        <h3>Novinka: Moover</h3>
-        <p>Elektrický pojezd + baterie. Manévrování na místě bez tažného vozidla.</p>
+        <span class="highlight-icon"><svg width="26" height="26" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="#D4962A" stroke="none"/></svg></span>
+        <h3>Novinka: Mover</h3>
+        <p style="margin:0;line-height:1.6;">•&nbsp; Elektrický pojezd + baterie.<br>•&nbsp; Manévrování bez tažného vozidla.</p>
       </div>
     </div>
   </div>
@@ -409,9 +410,9 @@
   <h2>Výbava karavanu</h2>
 
   <div class="novinka-box">
-    <span class="novinka-icon">⚡</span>
+    <span class="novinka-icon"><svg width="28" height="28" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="#D4962A" stroke="none"/></svg></span>
     <div>
-      <h3>Novinka: Moover + baterie</h3>
+      <h3>Novinka: Mover + baterie</h3>
       <p>Elektrický pojezd umožňuje parkování a manévrování bez tažného vozidla. Baterie zajistí provoz i bez připojení ke zdroji.</p>
     </div>
   </div>
@@ -440,11 +441,16 @@
 <div style="background:var(--bg2);padding:52px 24px;">
   <div style="max-width:720px;margin:0 auto;">
     <h2 style="font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;color:var(--text);margin-bottom:6px;">Fotogalerie</h2>
-    <p style="font-size:14px;color:var(--muted);margin-bottom:24px;">Kliknutím na fotku ji zobrazíte na celou obrazovku.</p>
-    <div id="galerie" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;"></div>
-    <p id="galerie-hint" style="margin-top:16px;font-size:12px;color:var(--muted);display:none;">
-      Fotky se načtou automaticky ze složky <code style="background:var(--bg3);padding:2px 6px;border-radius:4px;font-size:11px;">fotky/</code>
-    </p>
+    
+    <div id="galerie-slides" style="position:relative;border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:var(--bg2);">
+      <div id="galerie-img-wrap" style="width:100%;height:100%;"></div>
+      <button onclick="slideGalerie(-1)" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.85);border:none;border-radius:50%;width:40px;height:40px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text);">‹</button>
+      <button onclick="slideGalerie(1)" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.85);border:none;border-radius:50%;width:40px;height:40px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text);">›</button>
+      <div id="galerie-dots" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:6px;"></div>
+      <div id="galerie-caption" style="position:absolute;bottom:12px;right:16px;font-size:12px;color:rgba(255,255,255,.8);text-shadow:0 1px 3px rgba(0,0,0,.4);"></div>
+    </div>
+    <div id="galerie" style="display:none;"></div>
+    
   </div>
 </div>
 
@@ -465,25 +471,47 @@
     <h2>Ceník pronájmu</h2>
     <div class="cenik-grid">
       <div class="cenik-card">
-        <div class="cenik-label">Vedlejší sezóna</div>
+        <div class="cenik-label">Vedlejší sezóna · 1. 3. – 11. 6. / 7. 9. – 15. 11.</div>
         <div class="cenik-price">1 800 Kč</div>
         <div class="cenik-unit">za den (do 14 dní)</div>
         <div class="cenik-row"><span class="label">Nad 14 dní</span><span class="val">1 600 Kč / den</span></div>
+        <div class="cenik-row"><span class="label">Min. délka pronájmu</span><span class="val">3 dny</span></div>
       </div>
       <div class="cenik-card hlavni">
-        <div class="cenik-label hlavni-label">Hlavní sezóna</div>
+        <div class="cenik-label hlavni-label">Hlavní sezóna · 12. 6. – 6. 9.</div>
         <div class="cenik-price">1 950 Kč</div>
         <div class="cenik-unit">za den (do 14 dní)</div>
         <div class="cenik-row"><span class="label">Nad 14 dní</span><span class="val">1 750 Kč / den</span></div>
+        <div class="cenik-row"><span class="label">Min. délka pronájmu</span><span class="val">7 dní</span></div>
+      </div>
+    </div>
+    <div class="cenik-grid" style="margin-bottom:12px;">
+      <div class="cenik-card">
+        <div class="cenik-label">Vratná kauce</div>
+        <div class="cenik-price">15 000 Kč</div>
+        <div class="cenik-unit">splatná při převzetí</div>
+        <div class="cenik-row"><span class="label">Vrácení</span><span class="val">po předání bez škod</span></div>
+      </div>
+      <div class="cenik-card">
+        <div class="cenik-label">Manipulační poplatek</div>
+        <div class="cenik-price">1 500 Kč</div>
+        <div class="cenik-unit">jednorázový</div>
+        <div class="cenik-row"><span class="label">Platí při</span><span class="val">pronájmu kratším než minimum</span></div>
       </div>
     </div>
     <div class="cenik-note" style="margin-bottom: 12px;">
       Cenu a dostupnost vždy <strong>potvrdíme zpět</strong> e-mailem nebo telefonicky po odeslání poptávky.
     </div>
     <div class="cenik-note">
-      🚗 <strong>Přistavení karavanu</strong> na vámi zvolené místo je možné po předchozí domluvě. Cena přistavení sdělena individuálně.</div>
+      🚗 <strong>Přistavení karavanu</strong> je možné po předchozí domluvě. Cena přistavení bude sdělena individuálně.</div>
+    <div style="background:var(--bg);border-radius:10px;padding:14px 18px;border:1px solid var(--border);margin-top:12px;font-size:13px;color:var(--muted);line-height:1.7;">
+      <strong style="color:var(--text);font-size:13px;">Termíny předání a vrácení</strong><br>
+      V hlavní sezóně pronajímáme zpravidla od soboty do soboty — převzetí od <strong style="color:var(--text);">14:00</strong>, vrácení do <strong style="color:var(--text);">11:00</strong>. Mimo hlavní sezónu jsou časy domluveny individuálně dle vzájemné dohody.
+    </div>
   </div>
 </div>
+<!-- PŘEDÁNÍ INFO -->
+
 
 <!-- DOSTUPNOST -->
 <div id="dostupnost" style="background:var(--bg2);padding:52px 24px;">
@@ -533,7 +561,35 @@
   <h2>Rezervace</h2>
   <p class="rezervace-intro">Kalendář průběžně aktualizujeme, ale berte ho jako orientační. Rezervaci vždy potvrdíme zpět.</p>
 
-  <div class="steps">
+  
+<!-- KALKULAČKA -->
+<div style="background:var(--bg2);border-radius:14px;padding:24px;margin-bottom:32px;border:1px solid var(--border);">
+  <h3 style="font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;color:var(--text);margin-bottom:6px;">Předběžná kalkulace ceny</h3>
+  <p style="font-size:13px;color:var(--muted);margin-bottom:20px;">Vyberte termín a okamžitě uvidíte orientační cenu.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <label style="font-size:12px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;">Datum nástupu</label>
+      <input type="date" id="kalk-od" oninput="spocitej()" style="padding:10px 14px;border:1.5px solid var(--border);border-radius:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;color:var(--text);background:var(--bg);outline:none;">
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <label style="font-size:12px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;">Datum odjezdu</label>
+      <input type="date" id="kalk-do" oninput="spocitej()" style="padding:10px 14px;border:1.5px solid var(--border);border-radius:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;color:var(--text);background:var(--bg);outline:none;">
+    </div>
+  </div>
+
+  <div id="kalk-vysledek" style="display:none;border-top:1px solid var(--border);padding-top:16px;margin-top:4px;">
+    <div id="kalk-radky" style="display:flex;flex-direction:column;gap:6px;margin-bottom:14px;"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;background:var(--bg);border-radius:10px;padding:14px 18px;border:1px solid var(--border);">
+      <span style="font-size:14px;font-weight:500;color:var(--text);">Předběžná cena celkem</span>
+      <span id="kalk-celkem" style="font-family:'Fraunces',serif;font-size:1.5rem;color:var(--text);"></span>
+    </div>
+    <p style="font-size:12px;color:var(--muted);margin-top:10px;">Cena je orientační. Přesnou cenu potvrdíme při rezervaci. Nezahrnuje případné přistavení.</p>
+  </div>
+
+  <div id="kalk-chyba" style="display:none;font-size:13px;color:#A85C3A;margin-top:8px;"></div>
+</div>
+<div class="steps">
     <div class="step">
       <div class="step-num">1</div>
       <p>Pošlete nám <strong>termín (od–do)</strong>, počet osob a případně místo přistavení</p>
@@ -583,6 +639,106 @@
   </form>
 </section>
 
+
+
+<!-- TECHNICKÝ POPIS -->
+<div style="border-top:1px solid var(--border);">
+  <div style="max-width:720px;margin:0 auto;padding:0 24px;">
+    <button onclick="toggleSekce('tech-body','tech-icon')" style="width:100%;text-align:left;padding:24px 0;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit;">
+      <span style="font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;color:var(--text);">Technický popis</span>
+      <span id="tech-icon" style="font-size:22px;color:var(--muted);transition:transform .2s;">+</span>
+    </button>
+    <div id="tech-body" style="display:none;padding-bottom:40px;">
+
+  <p style="font-size:14px;color:var(--muted);margin-bottom:24px;">Hobby De Luxe 545 KMF 2018 — jeden z největších jednoosých karavanů.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:24px;">
+    <div style="background:var(--bg2);border-radius:10px;padding:16px 18px;border:1px solid var(--border);">
+      <div style="font-size:11px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px;">Délka</div>
+      <div style="font-size:1.2rem;font-family:'Fraunces',serif;color:var(--text);">7,42 m</div>
+    </div>
+    <div style="background:var(--bg2);border-radius:10px;padding:16px 18px;border:1px solid var(--border);">
+      <div style="font-size:11px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px;">Výška</div>
+      <div style="font-size:1.2rem;font-family:'Fraunces',serif;color:var(--text);">2,8 m</div>
+    </div>
+    <div style="background:var(--bg2);border-radius:10px;padding:16px 18px;border:1px solid var(--border);">
+      <div style="font-size:11px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px;">Šířka</div>
+      <div style="font-size:1.2rem;font-family:'Fraunces',serif;color:var(--text);">2,5 m</div>
+    </div>
+    <div style="background:var(--bg2);border-radius:10px;padding:16px 18px;border:1px solid var(--border);">
+      <div style="font-size:11px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px;">Celková hmotnost</div>
+      <div style="font-size:1.2rem;font-family:'Fraunces',serif;color:var(--text);">1 750 kg</div>
+    </div>
+    <div style="background:var(--bg2);border-radius:10px;padding:16px 18px;border:1px solid var(--border);">
+      <div style="font-size:11px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px;">Kapacita</div>
+      <div style="font-size:1.2rem;font-family:'Fraunces',serif;color:var(--text);">5–6 osob</div>
+    </div>
+    <div style="background:var(--accent);border-radius:10px;padding:16px 18px;">
+      <div style="font-size:11px;font-weight:500;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px;">Řidičský průkaz</div>
+      <div style="font-size:1rem;font-family:'Fraunces',serif;color:white;line-height:1.4;">B96 nebo B+E</div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
+    <div>
+      <div style="font-size:12px;font-weight:500;color:var(--accent);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px;">Pro klidný spánek</div>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px;font-size:13px;color:var(--text);">
+        <li>•&nbsp; Francouzské lůžko 200×140 cm</li>
+        <li>•&nbsp; Palanda 185×70 cm (max 75 kg)</li>
+        <li>•&nbsp; Rozkládací sedačka 118×193 cm</li>
+        <li>•&nbsp; Kvalitní matrace</li>
+      </ul>
+    </div>
+    <div>
+      <div style="font-size:12px;font-weight:500;color:var(--accent);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px;">Pro vaření</div>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px;font-size:13px;color:var(--text);">
+        <li>•&nbsp; Plynový vařič 3plotýnkový</li>
+        <li>•&nbsp; Lednice 150 l s mrazákem</li>
+        <li>•&nbsp; Prostorné výsuvné zásuvky</li>
+      </ul>
+    </div>
+    <div>
+      <div style="font-size:12px;font-weight:500;color:var(--accent);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px;">Pro hygienu</div>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px;font-size:13px;color:var(--text);">
+        <li>•&nbsp; Uzavírací sprchový kout</li>
+        <li>•&nbsp; Umyvadlo + chemické WC</li>
+        <li>•&nbsp; Úložné prostory</li>
+      </ul>
+    </div>
+    <div>
+      <div style="font-size:12px;font-weight:500;color:var(--accent);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px;">Komfort</div>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px;font-size:13px;color:var(--text);">
+        <li>•&nbsp; Klimatizace + markýza</li>
+        <li>•&nbsp; LED televize + DVD + USB</li>
+        <li>•&nbsp; USB zásuvky, 230V zásuvka</li>
+        <li>•&nbsp; Kempový nábytek (4 křesla + stůl)</li>
+        <li>•&nbsp; Topení s rozfukem, ohřev vody</li>
+        <li>•&nbsp; Nádrž na vodu 120 l</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    </div>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- FAQ -->
+<div style="background:var(--bg2);border-top:1px solid var(--border);">
+  <div style="max-width:720px;margin:0 auto;padding:0 24px;">
+    <button onclick="toggleSekce('faq-body','faq-icon')" style="width:100%;text-align:left;padding:24px 0;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit;">
+      <span style="font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;color:var(--text);">Časté dotazy</span>
+      <span id="faq-icon" style="font-size:22px;color:var(--muted);transition:transform .2s;">+</span>
+    </button>
+    <div id="faq-body" style="display:none;padding-bottom:40px;">
+
+      <p style="font-size:14px;color:var(--muted);margin-bottom:24px;">Nenašli jste odpověď? Napište nám.</p>
+      <div id="faq-list" style="display:flex;flex-direction:column;gap:4px;"></div>
+    </div>
+  </div>
+</div>
+
 <!-- KONTAKT -->
 <div class="kontakt-section">
   <div class="kontakt-inner">
@@ -597,6 +753,16 @@
 </div>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
+function toggleSekce(bodyId, iconId) {
+  var body = document.getElementById(bodyId);
+  var icon = document.getElementById(iconId);
+  if (!body || !icon) return;
+  var open = body.style.display === 'block';
+  body.style.display = open ? 'none' : 'block';
+  icon.textContent = open ? '+' : '×';
+}
+
 function odeslat(e) {
   e.preventDefault();
   const btn = e.target.querySelector('.btn-submit');
@@ -703,7 +869,148 @@ function posunMesic(smer) {
   aktualniMesic += smer;
   if (aktualniMesic > 11) { aktualniMesic = 0; aktualniRok++; }
   if (aktualniMesic < 0)  { aktualniMesic = 11; aktualniRok--; }
-  kresliKalendar();
+  
+// ═══════════════════════════════════════════════════
+// KALKULAČKA CEN
+// ═══════════════════════════════════════════════════
+var CENY = {
+  vedlejsi:    { do14: 1800, nad14: 1600 },
+  hlavni:      { do14: 1950, nad14: 1750 },
+};
+
+// Hlavní sezóna: červen–srpen (měsíce 6,7,8)
+function jeHlavniSezona(datum) {
+  var m = datum.getMonth() + 1;
+  return m >= 6 && m <= 8;
+}
+
+function spocitej() {
+  var odEl = document.getElementById('kalk-od');
+  var doEl = document.getElementById('kalk-do');
+  var vysledek = document.getElementById('kalk-vysledek');
+  var chyba = document.getElementById('kalk-chyba');
+  var radky = document.getElementById('kalk-radky');
+  var celkem = document.getElementById('kalk-celkem');
+
+  chyba.style.display = 'none';
+  vysledek.style.display = 'none';
+
+  if (!odEl.value || !doEl.value) return;
+
+  var od = new Date(odEl.value);
+  var do_ = new Date(doEl.value);
+
+  if (do_ <= od) {
+    chyba.textContent = 'Datum odjezdu musí být po datu nástupu.';
+    chyba.style.display = 'block';
+    return;
+  }
+
+  var pocetDni = Math.round((do_ - od) / (1000 * 60 * 60 * 24));
+
+  if (pocetDni < 1) return;
+
+  // Rozděl dny na hlavní a vedlejší sezónu
+  var hlavniDni = 0;
+  var vedlejsiDni = 0;
+  for (var i = 0; i < pocetDni; i++) {
+    var den = new Date(od);
+    den.setDate(den.getDate() + i);
+    if (jeHlavniSezona(den)) hlavniDni++;
+    else vedlejsiDni++;
+  }
+
+  // Vypočítej cenu
+  var cenaHlavni = 0;
+  var cenaVedlejsi = 0;
+  var sazbaHlavni = pocetDni > 14 ? CENY.hlavni.nad14 : CENY.hlavni.do14;
+  var sazbaVedlejsi = pocetDni > 14 ? CENY.vedlejsi.nad14 : CENY.vedlejsi.do14;
+
+  if (hlavniDni > 0) cenaHlavni = hlavniDni * sazbaHlavni;
+  if (vedlejsiDni > 0) cenaVedlejsi = vedlejsiDni * sazbaVedlejsi;
+
+  var cenaTotal = cenaHlavni + cenaVedlejsi;
+
+  // Zobraz výsledek
+  var html = '';
+  html += radek('Počet dní', pocetDni + ' dní');
+  if (hlavniDni > 0) html += radek('Hlavní sezóna (' + hlavniDni + ' dní × ' + sazbaHlavni.toLocaleString('cs') + ' Kč)', formatCena(cenaHlavni));
+  if (vedlejsiDni > 0) html += radek('Vedlejší sezóna (' + vedlejsiDni + ' dní × ' + sazbaVedlejsi.toLocaleString('cs') + ' Kč)', formatCena(cenaVedlejsi));
+  if (pocetDni > 14) html += radek('Sleva za dlouhý pobyt (nad 14 dní)', '✓ zahrnuta');
+
+  radky.innerHTML = html;
+  celkem.textContent = formatCena(cenaTotal);
+  vysledek.style.display = 'block';
+
+  // Vyplň datumy do formuláře
+  var inputy = document.querySelectorAll('#rezervace input[type="date"]');
+  if (inputy[0]) inputy[0].value = odEl.value;
+  if (inputy[1]) inputy[1].value = doEl.value;
+}
+
+function radek(label, hodnota) {
+  return '<div style="display:flex;justify-content:space-between;font-size:13px;padding:4px 0;border-bottom:1px solid var(--border);">' +
+    '<span style="color:var(--muted);">' + label + '</span>' +
+    '<span style="font-weight:500;color:var(--text);">' + hodnota + '</span>' +
+    '</div>';
+}
+
+function formatCena(c) {
+  return c.toLocaleString('cs-CZ') + ' Kč';
+}
+
+
+// FAQ
+var faqData = [
+  { q: 'Jaké řidičské oprávnění je potřeba?', a: 'Vzhledem k celkové hmotnosti 1 750 kg je nutné řidičské oprávnění <strong>B96</strong> nebo <strong>B+E</strong>. Dále požadujeme minimální věk řidiče 23 let a alespoň 5 let praxe s řidičským průkazem.' },
+  { q: 'Jaké jsou možnosti platby?', a: 'Platbu přijímáme <strong>bankovním převodem</strong> nebo <strong>hotovostí</strong> při předání karavanu.' },
+  { q: 'Je potřeba složit zálohu?', a: 'Ano, požadujeme zálohu ve výši <strong>50 % celkové ceny</strong> do 3 pracovních dnů od rezervace. Pokud záloha nebude uhrazena do 3 dnů, rezervace se ruší. Zbývající částku uhraďte nejpozději 7 dní před nástupem.' },
+  { q: 'Je potřeba složit kauci?', a: 'Ano, kauci ve výši <strong>15 000 Kč</strong> uhraďte nejpozději při převzetí karavanu. Po bezproblémovém vrácení je kauce vrácena v plné výši.' },
+  { q: 'Jsou povolena domácí zvířata?', a: 'Ne, z důvodu zachování čistoty a pohodlí pro všechny zákazníky <strong>není povoleno</strong> přepravovat ani ubytovávat zvířata v karavanu.' },
+  { q: 'Jaká je politika zrušení rezervace?', a: 'Při zrušení více než 60 dní před nástupem zálohu vracíme. Při zrušení 30–60 dní před nástupem vracíme 50 % zálohy. V ostatních případech záloha propadá. Rozumíme, že se mohou vyskytnout nečekané situace — rádi probereme individuální řešení.' },
+  { q: 'Musíme karavan uklidit před vrácením?', a: 'Ano, karavan musí být vrácen <strong>ve stejném čistém stavu</strong> jako při převzetí. V opačném případě je účtován smluvní poplatek za úklid.' },
+  { q: 'Co dělat v případě technické poruchy?', a: 'Kontaktujte nás — poskytneme vám potřebnou asistenci. Jsme k dispozici po celou dobu vaší dovolené.' },
+  { q: 'Je možné prodloužit pronájem během pobytu?', a: 'Ano, v závislosti na dostupnosti karavanu. Kontaktujte nás co nejdříve a domluvíme se.' },
+  { q: 'Je možné vrátit karavan jinam než byl převzat?', a: 'V některých případech ano, za dodatečný poplatek. Kontaktujte nás předem a domluvíme detaily.' },
+];
+
+var faqEl = document.getElementById('faq-list');
+if (faqEl) {
+  faqData.forEach(function(item, i) {
+    var wrapper = document.createElement('div');
+    wrapper.style.cssText = 'border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--bg);';
+
+    var btn = document.createElement('button');
+    btn.style.cssText = 'width:100%;text-align:left;padding:16px 20px;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:inherit;font-size:14px;font-weight:500;color:var(--text);';
+    btn.innerHTML = '<span>' + item.q + '</span><span style="font-size:18px;color:var(--muted);flex-shrink:0;transition:transform .2s;" class="faq-icon">+</span>';
+
+    var body = document.createElement('div');
+    body.style.cssText = 'display:none;padding:0 20px 16px;font-size:14px;color:var(--muted);line-height:1.7;border-top:1px solid var(--border);padding-top:14px;';
+    body.innerHTML = item.a;
+
+    btn.addEventListener('click', function() {
+      var open = body.style.display === 'block';
+      // Close all
+      document.querySelectorAll('#faq-list .faq-body').forEach(function(b) {
+        b.style.display = 'none';
+        b.previousSibling.querySelector('.faq-icon').textContent = '+';
+        b.previousSibling.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+      });
+      if (!open) {
+        body.style.display = 'block';
+        btn.querySelector('.faq-icon').textContent = '×';
+        btn.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+      }
+    });
+
+    body.classList.add('faq-body');
+    wrapper.appendChild(btn);
+    wrapper.appendChild(body);
+    faqEl.appendChild(wrapper);
+  });
+}
+
+kresliKalendar();
 }
 
 function vybratDen(datum) {
@@ -719,14 +1026,14 @@ function vybratDen(datum) {
 // Fotky vlož do složky "fotky/" vedle tohoto souboru
 // ═══════════════════════════════════════════════════
 const fotky = [
+  { src: 'fotky/karavan v kempu.jpg', alt: 'Karavan v kempu' },
+  { src: 'fotky/Kuchyň a posezení.jpg', alt: 'Interiér — kuchyň a posezení' },
+  { src: 'fotky/Koupelna sprcha.jpg', alt: 'Koupelna' },
   { src: 'fotky/Držák 2 kol.jpg', alt: 'Držák 2 kol' },
   { src: 'fotky/mover detail.jpeg', alt: 'Mover detail' },
   { src: 'fotky/mover.jpeg', alt: 'Mover' },
-  { src: 'fotky/karavan v kempu.jpg', alt: 'Karavan v kempu' },
   { src: 'fotky/Klimatizace.jpg', alt: 'Klimatizace' },
-  { src: 'fotky/Koupelna sprcha.jpg', alt: 'Koupelna a sprcha' },
   { src: 'fotky/Koupelna umyvadlo WC.jpg', alt: 'Koupelna umyvadlo WC' },
-  { src: 'fotky/Kuchyň a posezení.jpg', alt: 'Kuchyň a posezení' },
   { src: 'fotky/Kuchyňská linka.jpg', alt: 'Kuchyňská linka' },
   { src: 'fotky/Markýza.jpg', alt: 'Markýza' },
   { src: 'fotky/Patrové postele.jpg', alt: 'Patrové postele' },
@@ -803,8 +1110,202 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape')     zavritLightbox();
 });
 
+
+// ═══════════════════════════════════════════════════
+// KALKULAČKA CEN
+// ═══════════════════════════════════════════════════
+var CENY = {
+  vedlejsi:    { do14: 1800, nad14: 1600 },
+  hlavni:      { do14: 1950, nad14: 1750 },
+};
+
+// Hlavní sezóna: červen–srpen (měsíce 6,7,8)
+function jeHlavniSezona(datum) {
+  var m = datum.getMonth() + 1;
+  return m >= 6 && m <= 8;
+}
+
+function spocitej() {
+  var odEl = document.getElementById('kalk-od');
+  var doEl = document.getElementById('kalk-do');
+  var vysledek = document.getElementById('kalk-vysledek');
+  var chyba = document.getElementById('kalk-chyba');
+  var radky = document.getElementById('kalk-radky');
+  var celkem = document.getElementById('kalk-celkem');
+
+  chyba.style.display = 'none';
+  vysledek.style.display = 'none';
+
+  if (!odEl.value || !doEl.value) return;
+
+  var od = new Date(odEl.value);
+  var do_ = new Date(doEl.value);
+
+  if (do_ <= od) {
+    chyba.textContent = 'Datum odjezdu musí být po datu nástupu.';
+    chyba.style.display = 'block';
+    return;
+  }
+
+  var pocetDni = Math.round((do_ - od) / (1000 * 60 * 60 * 24));
+
+  if (pocetDni < 1) return;
+
+  // Rozděl dny na hlavní a vedlejší sezónu
+  var hlavniDni = 0;
+  var vedlejsiDni = 0;
+  for (var i = 0; i < pocetDni; i++) {
+    var den = new Date(od);
+    den.setDate(den.getDate() + i);
+    if (jeHlavniSezona(den)) hlavniDni++;
+    else vedlejsiDni++;
+  }
+
+  // Vypočítej cenu
+  var cenaHlavni = 0;
+  var cenaVedlejsi = 0;
+  var sazbaHlavni = pocetDni > 14 ? CENY.hlavni.nad14 : CENY.hlavni.do14;
+  var sazbaVedlejsi = pocetDni > 14 ? CENY.vedlejsi.nad14 : CENY.vedlejsi.do14;
+
+  if (hlavniDni > 0) cenaHlavni = hlavniDni * sazbaHlavni;
+  if (vedlejsiDni > 0) cenaVedlejsi = vedlejsiDni * sazbaVedlejsi;
+
+  var cenaTotal = cenaHlavni + cenaVedlejsi;
+
+  // Zobraz výsledek
+  var html = '';
+  html += radek('Počet dní', pocetDni + ' dní');
+  if (hlavniDni > 0) html += radek('Hlavní sezóna (' + hlavniDni + ' dní × ' + sazbaHlavni.toLocaleString('cs') + ' Kč)', formatCena(cenaHlavni));
+  if (vedlejsiDni > 0) html += radek('Vedlejší sezóna (' + vedlejsiDni + ' dní × ' + sazbaVedlejsi.toLocaleString('cs') + ' Kč)', formatCena(cenaVedlejsi));
+  if (pocetDni > 14) html += radek('Sleva za dlouhý pobyt (nad 14 dní)', '✓ zahrnuta');
+
+  radky.innerHTML = html;
+  celkem.textContent = formatCena(cenaTotal);
+  vysledek.style.display = 'block';
+
+  // Vyplň datumy do formuláře
+  var inputy = document.querySelectorAll('#rezervace input[type="date"]');
+  if (inputy[0]) inputy[0].value = odEl.value;
+  if (inputy[1]) inputy[1].value = doEl.value;
+}
+
+function radek(label, hodnota) {
+  return '<div style="display:flex;justify-content:space-between;font-size:13px;padding:4px 0;border-bottom:1px solid var(--border);">' +
+    '<span style="color:var(--muted);">' + label + '</span>' +
+    '<span style="font-weight:500;color:var(--text);">' + hodnota + '</span>' +
+    '</div>';
+}
+
+function formatCena(c) {
+  return c.toLocaleString('cs-CZ') + ' Kč';
+}
+
+
+// FAQ
+var faqData = [
+  { q: 'Jaké řidičské oprávnění je potřeba?', a: 'Vzhledem k celkové hmotnosti 1 750 kg je nutné řidičské oprávnění <strong>B96</strong> nebo <strong>B+E</strong>. Dále požadujeme minimální věk řidiče 23 let a alespoň 5 let praxe s řidičským průkazem.' },
+  { q: 'Jaké jsou možnosti platby?', a: 'Platbu přijímáme <strong>bankovním převodem</strong> nebo <strong>hotovostí</strong> při předání karavanu.' },
+  { q: 'Je potřeba složit zálohu?', a: 'Ano, požadujeme zálohu ve výši <strong>50 % celkové ceny</strong> do 3 pracovních dnů od rezervace. Pokud záloha nebude uhrazena do 3 dnů, rezervace se ruší. Zbývající částku uhraďte nejpozději 7 dní před nástupem.' },
+  { q: 'Je potřeba složit kauci?', a: 'Ano, kauci ve výši <strong>15 000 Kč</strong> uhraďte nejpozději při převzetí karavanu. Po bezproblémovém vrácení je kauce vrácena v plné výši.' },
+  { q: 'Jsou povolena domácí zvířata?', a: 'Ne, z důvodu zachování čistoty a pohodlí pro všechny zákazníky <strong>není povoleno</strong> přepravovat ani ubytovávat zvířata v karavanu.' },
+  { q: 'Jaká je politika zrušení rezervace?', a: 'Při zrušení více než 60 dní před nástupem zálohu vracíme. Při zrušení 30–60 dní před nástupem vracíme 50 % zálohy. V ostatních případech záloha propadá. Rozumíme, že se mohou vyskytnout nečekané situace — rádi probereme individuální řešení.' },
+  { q: 'Musíme karavan uklidit před vrácením?', a: 'Ano, karavan musí být vrácen <strong>ve stejném čistém stavu</strong> jako při převzetí. V opačném případě je účtován smluvní poplatek za úklid.' },
+  { q: 'Co dělat v případě technické poruchy?', a: 'Kontaktujte nás — poskytneme vám potřebnou asistenci. Jsme k dispozici po celou dobu vaší dovolené.' },
+  { q: 'Je možné prodloužit pronájem během pobytu?', a: 'Ano, v závislosti na dostupnosti karavanu. Kontaktujte nás co nejdříve a domluvíme se.' },
+  { q: 'Je možné vrátit karavan jinam než byl převzat?', a: 'V některých případech ano, za dodatečný poplatek. Kontaktujte nás předem a domluvíme detaily.' },
+];
+
+var faqEl = document.getElementById('faq-list');
+if (faqEl) {
+  faqData.forEach(function(item, i) {
+    var wrapper = document.createElement('div');
+    wrapper.style.cssText = 'border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--bg);';
+
+    var btn = document.createElement('button');
+    btn.style.cssText = 'width:100%;text-align:left;padding:16px 20px;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:inherit;font-size:14px;font-weight:500;color:var(--text);';
+    btn.innerHTML = '<span>' + item.q + '</span><span style="font-size:18px;color:var(--muted);flex-shrink:0;transition:transform .2s;" class="faq-icon">+</span>';
+
+    var body = document.createElement('div');
+    body.style.cssText = 'display:none;padding:0 20px 16px;font-size:14px;color:var(--muted);line-height:1.7;border-top:1px solid var(--border);padding-top:14px;';
+    body.innerHTML = item.a;
+
+    btn.addEventListener('click', function() {
+      var open = body.style.display === 'block';
+      // Close all
+      document.querySelectorAll('#faq-list .faq-body').forEach(function(b) {
+        b.style.display = 'none';
+        b.previousSibling.querySelector('.faq-icon').textContent = '+';
+        b.previousSibling.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+      });
+      if (!open) {
+        body.style.display = 'block';
+        btn.querySelector('.faq-icon').textContent = '×';
+        btn.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+      }
+    });
+
+    body.classList.add('faq-body');
+    wrapper.appendChild(btn);
+    wrapper.appendChild(body);
+    faqEl.appendChild(wrapper);
+  });
+}
+
 kresliKalendar();
-sestavGalerii();
+
+// Galerie slideshow
+var aktualniSlide = 0;
+
+function initSlideshow() {
+  var wrap = document.getElementById('galerie-img-wrap');
+  var dots = document.getElementById('galerie-dots');
+  if (!wrap || !dots) return;
+
+  // Show first 3 as main slides, rest available via lightbox
+  fotky.slice(0, 3).forEach(function(f, i) {
+    var img = document.createElement('img');
+    img.src = f.src;
+    img.alt = f.alt;
+    img.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s;cursor:zoom-in;';
+    img.onclick = function() { otevritLightbox(i); };
+    img.onerror = function() {
+      img.style.display = 'none';
+    };
+    if (i === 0) img.style.opacity = '1';
+    wrap.appendChild(img);
+
+    var dot = document.createElement('div');
+    dot.style.cssText = 'width:8px;height:8px;border-radius:50%;background:' + (i===0?'white':'rgba(255,255,255,.5)') + ';cursor:pointer;transition:background .2s;';
+    dot.onclick = function() { goToSlide(i); };
+    dots.appendChild(dot);
+  });
+
+  updateCaption();
+}
+
+function goToSlide(n) {
+  var imgs = document.querySelectorAll('#galerie-img-wrap img');
+  var dots = document.querySelectorAll('#galerie-dots div');
+  var total = Math.min(fotky.length, 3);
+  if (imgs.length === 0) return;
+  imgs[aktualniSlide].style.opacity = '0';
+  dots[aktualniSlide].style.background = 'rgba(255,255,255,.5)';
+  aktualniSlide = (n + total) % total;
+  imgs[aktualniSlide].style.opacity = '1';
+  dots[aktualniSlide].style.background = 'white';
+  updateCaption();
+}
+
+function slideGalerie(smer) { goToSlide(aktualniSlide + smer); }
+
+function updateCaption() {
+  var cap = document.getElementById('galerie-caption');
+  if (cap) cap.textContent = (aktualniSlide + 1) + ' / ' + Math.min(fotky.length, 3);
+}
+
+initSlideshow();
+sestavGalerii(); // fills hidden #galerie for lightbox
+
 </script>
 </body>
 </html>
