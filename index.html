@@ -52,102 +52,136 @@
     .divider { height: 1px; background: var(--border); max-width: 760px; margin: 0 auto; }
 
     .hero {
-      background: linear-gradient(145deg, #1A1A18 0%, #2E2E2B 55%, #3D3D3A 100%);
-      color: white;
-      padding: 68px 24px 74px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 70% 30%, rgba(255,255,255,0.05) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: -1px; left: 0; right: 0;
-      height: 40px;
-      background: var(--bg);
-      clip-path: ellipse(55% 100% at 50% 100%);
-    }
-    .hero > * { position: relative; z-index: 1; }
-    .hero-label {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.55);
-      margin-bottom: 18px;
-    }
-    .hero h1 {
-      font-family: 'Fraunces', serif;
-      font-size: clamp(2rem, 6vw, 3.2rem);
-      font-weight: 400;
-      line-height: 1.15;
-      margin-bottom: 12px;
-      color: white;
-    }
-    .hero h1 em { font-style: italic; color: #D4B97A; }
-    .hero-sub {
-      font-size: 15px;
-      color: rgba(255,255,255,0.72);
-      margin-bottom: 28px;
-      font-weight: 300;
-    }
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
-      margin-bottom: 28px;
-    }
-    .badge {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      color: rgba(255,255,255,0.95);
-      padding: 7px 14px;
-      border-radius: 100px;
-      font-size: 13px;
-    }
-    .hero-note {
-      max-width: 640px;
-      margin: 0 auto 28px;
-      font-size: 14px;
-      color: rgba(255,255,255,0.75);
-    }
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-    }
-    .hero-cta,
-    .hero-secondary {
-      display: inline-block;
-      text-decoration: none;
-      padding: 14px 28px;
-      border-radius: 100px;
-      font-size: 15px;
-      font-weight: 500;
-      transition: transform .15s, box-shadow .15s, background .15s;
-    }
-    .hero-cta {
-      background: white;
-      color: var(--accent2);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    }
-    .hero-secondary {
-      color: white;
-      border: 1px solid rgba(255,255,255,0.28);
-      background: rgba(255,255,255,0.08);
-    }
-    .hero-cta:hover,
-    .hero-secondary:hover { transform: translateY(-2px); }
+  color: white;
+  padding: 92px 24px 98px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(20,20,18,0.10) 0%, rgba(20,20,18,0.60) 42%, rgba(20,20,18,0.80) 100%),
+    linear-gradient(145deg, rgba(26,26,24,0.20) 0%, rgba(46,46,43,0.52) 55%, rgba(61,61,58,0.66) 100%),
+    url('fotky/1_karavan-v-kempu.jpg') center center / cover no-repeat;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 18%, rgba(255,255,255,0.10) 0%, transparent 42%),
+    radial-gradient(ellipse at 72% 30%, rgba(255,255,255,0.06) 0%, transparent 52%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background: var(--bg);
+  clip-path: ellipse(58% 100% at 50% 100%);
+}
+
+.hero > * { position: relative; z-index: 1; }
+
+.hero-content {
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.74);
+  margin-bottom: 18px;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.35);
+}
+
+.hero h1 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.12;
+  margin-bottom: 14px;
+  color: white;
+  text-shadow: 0 3px 18px rgba(0,0,0,0.34);
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: #E2C98D;
+}
+
+.hero-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 30px;
+  font-weight: 300;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.30);
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.badge {
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.24);
+  color: rgba(255,255,255,0.96);
+  padding: 7px 14px;
+  border-radius: 100px;
+  font-size: 13px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.hero-cta,
+.hero-secondary {
+  display: inline-block;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: transform .15s, box-shadow .15s, background .15s;
+}
+
+.hero-cta {
+  background: white;
+  color: var(--accent2);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+}
+
+.hero-secondary {
+  color: white;
+  border: 1px solid rgba(255,255,255,0.32);
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.hero-cta:hover,
+.hero-secondary:hover {
+  transform: translateY(-2px);
+}
 
     .full-band {
       background: var(--bg2);
@@ -542,36 +576,79 @@
       color: rgba(255,255,255,0.6); font-size: 13px;
     }
 
-    @media (max-width: 640px) {
-      .highlight-grid,
-      .vybava-grid,
-      .include-grid,
-      .cenik-grid,
-      .form-grid { grid-template-columns: 1fr; }
-      .hero-actions { flex-direction: column; align-items: center; }
-      .hero-cta, .hero-secondary { width: 100%; max-width: 320px; }
-      .gallery-stage { aspect-ratio: 4 / 3; }
-    }
+@media (max-width: 640px) {
+  .hero {
+    padding: 84px 20px 88px;
+  }
+
+  .highlight-grid,
+  .vybava-grid,
+  .include-grid,
+  .cenik-grid,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-cta,
+  .hero-secondary {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .gallery-stage {
+    aspect-ratio: 4 / 3;
+  }
+
+  .tech-grid-mobile-fix {
+    grid-template-columns: 1fr !important;
+  }
+
+  .tech-list-grid-mobile-fix {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+
+  .calendar-title {
+    min-width: auto;
+    font-size: 1rem;
+  }
+
+  .legend {
+    gap: 10px;
+  }
+
+  .legend-item {
+    font-size: 12px;
+  }
+}
   </style>
 </head>
 <body>
 
-  <div class="hero">
+ <div class="hero">
+  <div class="hero-content">
     <span class="hero-label">Pronájem karavanu · Brno a okolí · Jižní Morava</span>
     <h1>Rodinná dovolená<br><em>s komfortem domova</em></h1>
-    <p class="hero-sub">Hobby De Luxe 545 KMF · ideálně 4 osoby, až 6 osob · Hostěnice u Brna</p>
+    <p class="hero-sub">Hobby De Luxe 545 KMF · 1 750 kg</p>
     <div class="hero-badges">
       <span class="badge">👨‍👩‍👧‍👦 Ideálně 4 osoby, až 6 osob</span>
       <span class="badge">🚿 Sprcha + WC</span>
       <span class="badge">🍳 Kuchyňka + 150 l lednice</span>
       <span class="badge">⚡ Mover – parkování bez stresu</span>
-      <span class="badge">🪪 ŘP B96 nebo B+E · hmotnost 1 750 kg</span>
+      <span class="badge">🪪 ŘP B96 nebo B+E</span>
     </div>
+
     <div class="hero-actions">
       <a href="#dostupnost" class="hero-cta">Zjistit dostupnost a poslat poptávku</a>
       <a href="tel:+420606722911" class="hero-secondary">Zavolat</a>
     </div>
   </div>
+</div>
 
   <div class="full-band">
     <div class="band-inner">
@@ -612,7 +689,6 @@
         </div>
       </div>
     </div>
-  </div>
   </div>
 
   <section>
@@ -936,13 +1012,12 @@
     }
 
     const occupied = new Set([
-      ...range('2025-06-14', '2025-06-21'),
-      ...range('2025-07-05', '2025-07-19'),
-      ...range('2025-08-02', '2025-08-16')
+      //...range('2026-06-26', '2026-07-04'),
+      //...range('202x-07-05', '202x-07-19')
     ]);
 
     const pending = new Set([
-      // ...range('2025-05-10', '2025-05-17')
+      ...range('2026-06-26', '2026-07-04')
     ]);
 
     const seasonStart = { month: 3, day: 1 };
