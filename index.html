@@ -850,45 +850,45 @@
       <div class="step"><div class="step-num">3</div><p>Domluvíme <strong>předání a veškeré detaily</strong>.</p></div>
     </div>
 
-    <form name="rezervace" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="rezervace">
-      <p style="display:none;">
-        <label>Nechte toto pole prázdné: <input name="bot-field"></label>
-      </p>
+    <form name="rezervace" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="rezervace">
+  <p style="display:none;">
+    <label>Nechte toto pole prázdné: <input name="bot-field"></label>
+  </p>
 
-      <div class="form-grid">
-        <div class="form-group">
-          <label for="jmeno">Jméno a příjmení</label>
-          <input id="jmeno" name="jmeno" type="text" placeholder="Jan Novák" required>
-        </div>
-        <div class="form-group">
-          <label for="telefon">Telefon</label>
-          <input id="telefon" name="telefon" type="tel" placeholder="+420 600 000 000" required>
-        </div>
-        <div class="form-group">
-          <label for="email">E-mail</label>
-          <input id="email" name="email" type="email" placeholder="vas@email.cz" required>
-        </div>
-        <div class="form-group">
-          <label for="pocet_osob">Počet osob</label>
-          <input id="pocet_osob" name="pocet_osob" type="number" min="1" max="6" placeholder="2–6">
-        </div>
-        <div class="form-group">
-          <label for="datum_od">Od</label>
-          <input id="datum_od" name="datum_od" type="date" required>
-        </div>
-        <div class="form-group">
-          <label for="datum_do">Do</label>
-          <input id="datum_do" name="datum_do" type="date" required>
-        </div>
-        <div class="form-group full">
-          <label for="poznamka">Dotazy</label>
-          <textarea id="poznamka" name="poznamka" placeholder="Např. typ vozidla – pro ověření, jaký je potřeba ŘP."></textarea>
-        </div>
-      </div>
-      <button type="submit" class="btn-submit">Nezávazně poptat termín →</button>
-    </form>
-  </section>
+  <div class="form-grid">
+    <div class="form-group">
+      <label for="jmeno">Jméno a příjmení</label>
+      <input id="jmeno" name="jmeno" type="text" placeholder="Jan Novák" required>
+    </div>
+    <div class="form-group">
+      <label for="telefon">Telefon</label>
+      <input id="telefon" name="telefon" type="tel" placeholder="+420 600 000 000" required>
+    </div>
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" placeholder="vas@email.cz" required>
+    </div>
+    <div class="form-group">
+      <label for="pocet_osob">Počet osob</label>
+      <input id="pocet_osob" name="pocet_osob" type="number" min="1" max="6" placeholder="2–6">
+    </div>
+    <div class="form-group">
+      <label for="datum_od">Od</label>
+      <input id="datum_od" name="datum_od" type="date" required>
+    </div>
+    <div class="form-group">
+      <label for="datum_do">Do</label>
+      <input id="datum_do" name="datum_do" type="date" required>
+    </div>
+    <div class="form-group full">
+      <label for="poznamka">Dotazy</label>
+      <textarea id="poznamka" name="poznamka" placeholder="Např. typ vozidla – pro ověření, jaký je potřeba ŘP."></textarea>
+    </div>
+  </div>
+
+  <button type="submit" class="btn-submit">Nezávazně poptat termín →</button>
+</form>
 
   <div class="accordion-wrap" style="background:#ffffff;">
     <div class="accordion-inner">
